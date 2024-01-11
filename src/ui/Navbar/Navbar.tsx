@@ -1,7 +1,8 @@
 import styles from "./Navbar.module.scss";
-import Logo from "./Logo";
+
 import NavList from "./NavList";
 import AuthNavigation from "./AuthNavigation";
+import Logo from "../Logo/Logo";
 
 export default function Navbar(): JSX.Element {
   return (

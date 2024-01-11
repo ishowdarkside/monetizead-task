@@ -1,0 +1,64 @@
+.form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 60rem;
+
+  button {
+    border: none;
+    outline: none;
+    align-self: flex-start;
+    padding: 2rem 4rem;
+    background-color: #454e29;
+    cursor: pointer;
+    color: #ffff;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}
+
+.fieldWrapper {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+
+  label {
+    font-weight: 600;
+  }
+
+  input,
+  select {
+    padding: 1.5rem 1rem;
+    background-color: #fefae0;
+    border: none;
+    outline: none;
+    color: #454e29;
+    &::placeholder {
+      color: #454e29;
+    }
+  }
+}
+
+.newsletterWrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+.statusWrapper {
+  padding: 1.5rem 0;
+}
+
+.radiosWrapper {
+  display: flex;
+  gap: 3rem;
+
+  & > * {
+    display: flex;
+    gap: 1rem;
+  }
+}
