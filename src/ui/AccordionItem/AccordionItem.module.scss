@@ -1,0 +1,33 @@
+.accordionItem {
+  max-width: 60rem;
+  margin: 0 auto;
+  height: 70px;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(#454e29, 0.4);
+
+  p {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.questionWrapper {
+  display: flex;
+  padding: 2rem 1rem;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  justify-content: space-between;
+
+  &:hover {
+    background-color: rgba(#454e29, 0.1);
+  }
+}
+
+.activeTab {
+  height: auto;
+}
+
+.rotateCarrot {
+  transform: rotate(180deg);
+}

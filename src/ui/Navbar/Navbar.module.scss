@@ -1,0 +1,65 @@
+.nav {
+  height: 14rem;
+  background-color: #fefae0;
+  display: flex;
+  align-items: center;
+
+  & > * {
+    flex-grow: 1;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    a {
+      display: block;
+      padding-bottom: 0.4rem;
+
+      text-decoration: none;
+      color: #454e29;
+      position: relative;
+
+      &:hover .decor {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.logo {
+  font-size: 5rem;
+  font-weight: 400;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+:global(.active) {
+  font-weight: 700;
+}
+
+.decor {
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  width: 0px;
+  height: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #454e29;
+}
+
+.authWrapper {
+  display: flex;
+  gap: 2rem;
+}

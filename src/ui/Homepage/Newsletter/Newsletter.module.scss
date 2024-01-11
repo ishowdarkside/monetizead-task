@@ -1,0 +1,25 @@
+.sectionBody {
+  padding: 10rem 0;
+  background-color: #454e29;
+  color: #f5f5f5;
+
+  h2 {
+    font-size: 7rem;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+
+    &:hover {
+      background-color: lighten(#454e29, 15);
+    }
+  }
+}
