@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "./mixins.scss";
+
 *,
 *::before,
 *::after {
@@ -10,6 +12,15 @@
 
 html {
   font-size: 62.5%; // 1rem = 10px;
+
+  @include responsive("tab-port") {
+    font-size: 56.25%; // 1rem = 9px
+  }
+
+  @include responsive("mobile") {
+    font-size: 50%; // 1rem = 8px
+  }
+
   box-sizing: border-box;
 }
 
@@ -25,4 +36,9 @@ body {
   max-width: 120rem;
   margin-left: auto;
   margin-right: auto;
+
+  @include responsive("tab-land") {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }

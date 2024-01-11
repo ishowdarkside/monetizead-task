@@ -1,17 +1,17 @@
 import { useRestrict } from "../../hooks/useRestrict";
 import Navbar from "../../ui/Navbar/Navbar";
-import { RegisterForm } from "./RegisterForm/RegisterForm";
-import styles from "./RegisterPage.module.scss";
+import LoginForm from "./LoginForm/LoginForm";
+import styles from "./LoginPage.module.scss";
 
-export default function RegisterPage(): JSX.Element {
+export default function LoginPage(): JSX.Element {
   useRestrict();
   return (
     <>
       <Navbar />
       <section className={styles.sectionBody}>
         <div className="container">
-          <span className={styles.pageRole}>Register</span>
-          <RegisterForm />
+          <span className={styles.pageRole}>Login</span>
+          <LoginForm />
         </div>
       </section>
     </>
