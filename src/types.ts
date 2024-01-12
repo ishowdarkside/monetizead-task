@@ -18,3 +18,21 @@ export interface JWT {
   id: string;
   username: string;
 }
+
+export interface UserInterface {
+  username?: string;
+  id?: string;
+}
+
+export interface UserContextInterface {
+  isLogged: boolean;
+  setIsLogged: (val: boolean) => void;
+  userData: UserInterface;
+  setUserData: (data: UserInterface) => void;
+}
+
+export interface ProductInterface {
+  name: string;
+  price: number;
+  linkedProducts?: { name: string; price: number };
+}

@@ -1,6 +1,11 @@
+@import "../../styles/mixins.scss";
 .logo {
   font-size: 5rem;
   font-weight: 400;
+
+  @include responsive("mobile") {
+    font-size: 3rem;
+  }
 
   span {
     font-weight: 700;

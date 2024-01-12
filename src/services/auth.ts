@@ -32,7 +32,6 @@ export async function registerService(formData: RegisterFormValues) {
 
 export async function loginService(username: string, password: string) {
   try {
-    console.log(username, password);
     const res = await axios.post<loginResponse>(`${BASE_URL}/api/login/`, {
       username,
       password,
@@ -43,7 +42,6 @@ export async function loginService(username: string, password: string) {
       return { status: "success", message: "Logged in successfully!" };
     }
   } catch (err) {
-    console.log(err);
     if (axios.isAxiosError(err)) {
       if (err.response!.status === 401 || err.response!.status === 400)
         return { status: "fail", message: "Invalid credentials" };

@@ -1,0 +1,59 @@
+@import "../../../styles/mixins.scss";
+.filterForm {
+  display: flex;
+
+  @include responsive-custom(48.75em) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3rem;
+  }
+  margin-bottom: 2rem;
+  align-items: flex-end;
+  input {
+    &::placeholder {
+      color: #454e29;
+    }
+    background-color: #fefae0;
+    color: #454e29;
+
+    border: none;
+    outline: none;
+    padding: 1.3rem 2rem;
+
+    &:first-of-type {
+      flex-basis: 50%;
+    }
+  }
+}
+
+.select {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  background-color: transparent;
+  border: 2px solid #454e29;
+  color: #454e29;
+}
+
+.selectWrapper {
+  select {
+    padding: 1rem 3rem;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  span {
+    font-size: 1.4rem;
+  }
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #454e29;
+  color: #fefae0;
+}

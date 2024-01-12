@@ -9,9 +9,9 @@ export function useProtect() {
   const token = localStorage.getItem("jwt");
 
   useEffect(() => {
-    if (!token) return navigate("/");
-    if (!isValidJWT(token)) return navigate("/");
+    if (!token) return navigate("/auth/login");
+    if (!isValidJWT(token)) return navigate("/auth/login");
     const decoded: JWT = jwtDecode(token);
-    if (!decoded.username) return navigate("/");
-  }, []);
+    if (!decoded.username) return navigate("/auth/login");
+  }, [navigate, token]);
 }

@@ -1,17 +1,36 @@
 import styles from "./Navbar.module.scss";
 import { Link } from "react-router-dom";
-import CartIcon from "../../assets/cart.svg";
-import UserIcon from "../../assets/user.svg";
+import { useUserContext } from "../../context/userContext";
+import { useGetUserData } from "../../hooks/useGetUserData";
 
 export default function AuthNavigation() {
+  useGetUserData();
+  const { isLogged, userData, setIsLogged, setUserData } = useUserContext();
+
+  function logoutHandler() {
+    localStorage.removeItem("jwt");
+    setUserData({});
+    setIsLogged(false);
+  }
   return (
     <div className={styles.authWrapper}>
-      <Link to="/auth/login">
-        <img src={UserIcon} alt="user" />
-      </Link>
-      <Link to="/cart">
-        <img src={CartIcon} alt="cart" />
-      </Link>
+      {!isLogged && (
+        <Link to="/auth/login" className={styles.loginBtn}>
+          Login
+        </Link>
+      )}
+      {isLogged && (
+        <div className={styles.userInfo}>
+          <b>{userData.username}</b>
+          <span>{userData.id}</span>
+        </div>
+      )}
+
+      {isLogged && (
+        <button className={styles.logoutBtn} onClick={logoutHandler}>
+          Logout
+        </button>
+      )}
     </div>
   );
 }

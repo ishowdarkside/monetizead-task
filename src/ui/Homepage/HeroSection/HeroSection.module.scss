@@ -1,3 +1,5 @@
+@import "../../../styles/mixins.scss";
+
 .sectionBody {
   background-image: url("../../../assets/bg-image.png"),
     linear-gradient(to left, rgba(#fefae0, 0), #fefae0);
@@ -9,6 +11,10 @@
 .heading {
   font-size: 7rem;
   font-weight: 800;
+
+  @include responsive-custom(25em) {
+    font-size: 5rem;
+  }
 }
 
 .wrapper {

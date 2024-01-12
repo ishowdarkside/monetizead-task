@@ -9,7 +9,6 @@ export default function LoginForm(): JSX.Element {
   const passwordRef = useRef<HTMLInputElement>(null);
 
   const navigate = useNavigate();
-
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (

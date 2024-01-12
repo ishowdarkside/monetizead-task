@@ -1,3 +1,4 @@
+@import "../../styles/mixins.scss";
 .nav {
   height: 14rem;
   background-color: #fefae0;
@@ -19,6 +20,10 @@
     display: flex;
     align-items: center;
     gap: 3rem;
+
+    @include responsive-custom(67.1875em) {
+      display: none;
+    }
 
     a {
       display: block;
@@ -53,4 +58,51 @@
 .authWrapper {
   display: flex;
   gap: 2rem;
+  align-items: center;
+
+  @include responsive-custom(67.1875em) {
+    display: none;
+  }
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  span {
+    font-size: 1rem;
+  }
+}
+
+.logoutBtn {
+  border: none;
+  outline: none;
+  background-color: #454e29;
+  color: #fefae0;
+  padding: 0.5rem 0.8rem;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.loginBtn {
+  border: none;
+  outline: none;
+  background-color: #454e29;
+  color: #fefae0;
+  padding: 0.5rem 0.8rem;
+  border-radius: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.mobileBurger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  @include responsive-custom(67.1875em) {
+    display: block;
+  }
 }

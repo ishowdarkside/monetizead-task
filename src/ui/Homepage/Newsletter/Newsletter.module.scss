@@ -1,3 +1,4 @@
+@import "../../../styles/mixins.scss";
 .sectionBody {
   padding: 10rem 0;
   background-color: #454e29;
@@ -6,6 +7,11 @@
   h2 {
     font-size: 7rem;
     text-align: center;
+
+    @include responsive-custom(22.5em) {
+      font-size: 5rem;
+      line-height: 1.2;
+    }
   }
 
   p {

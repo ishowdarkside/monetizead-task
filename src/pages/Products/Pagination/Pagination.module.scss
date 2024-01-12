@@ -1,0 +1,22 @@
+.pageBtn {
+  border: none;
+  outline: none;
+  background-color: #fefae0;
+  padding: 2rem 2.4rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: #454e29;
+  cursor: pointer;
+}
+
+.paginationWrapper {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.activebtn {
+  background-color: #454e29;
+  padding: 2rem 2.4rem;
+  color: #fefae0;
+}
