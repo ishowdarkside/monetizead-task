@@ -14,7 +14,8 @@ export default function LoginForm(): JSX.Element {
     if (
       !usernameRef.current?.value ||
       !passwordRef.current?.value ||
-      usernameRef.current.value.length < 3
+      usernameRef.current.value.length < 3 ||
+      passwordRef.current.value.length < 6
     )
       return;
     const res = await loginService(

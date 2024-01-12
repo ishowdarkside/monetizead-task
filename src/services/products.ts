@@ -1,5 +1,4 @@
 import axios from "axios";
-import DJson from "dirty-json";
 
 const BASE_URL = `https://junior-test.mntzdevs.com`;
 
@@ -11,12 +10,9 @@ export async function getProducts() {
       headers: { Authorization: `Bearer ${token}` },
     });
 
-    if (res.status === 200) {
-      const formated = DJson.parse(res.data);
-      return formated;
-    }
+    console.log(res);
 
-    return res;
+    return res.data;
   } catch (err) {
     if (axios.isAxiosError(err)) {
       if (err.response!.status === 403) {
