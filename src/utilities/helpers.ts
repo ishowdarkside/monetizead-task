@@ -34,7 +34,6 @@ export function groupAllProducts(products: ProductInterface[], filter: string) {
   }
 
   if (filter === "high-low") {
-    console.log("EVE ME SAD OVDJE");
     return outputArray
       .filter((item, index, array) => !checkDuplicates(item, index, array))
       .sort((a, b) => b.price - a.price);

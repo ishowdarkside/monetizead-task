@@ -10,8 +10,6 @@ export async function getProducts() {
       headers: { Authorization: `Bearer ${token}` },
     });
 
-    console.log(res);
-
     return res.data;
   } catch (err) {
     if (axios.isAxiosError(err)) {
