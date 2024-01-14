@@ -16,6 +16,7 @@ const context = createContext<ProductContextInterface | null>(null);
 export default function ProductContext({ children }: { children: ReactNode }) {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
+
   const [filter, setFilter] = useState("low-high");
   const [numResults, setNumResults] = useState(10);
 

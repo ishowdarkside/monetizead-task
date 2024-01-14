@@ -13,6 +13,7 @@ export async function useCheckExpiredToken(
   const { setIsLogged, setUserData } = useUserContext();
 
   useEffect(() => {
+    //Ako ne refetchuje i podaci su undefined, znaci server nije vratio produkte, token je expired
     if (!isLoading && !input && !isRefetching) {
       localStorage.removeItem("jwt");
       setIsLogged(false);

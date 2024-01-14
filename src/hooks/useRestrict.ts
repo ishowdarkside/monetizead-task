@@ -10,9 +10,9 @@ export function useRestrict() {
 
   useEffect(() => {
     if (!token) return;
-    if (isValidJWT(token)) {
-      const decoded: JWT = jwtDecode(token);
-      if (decoded.username) return navigate("/");
-    }
+    if (!isValidJWT(token)) return;
+
+    const decoded: JWT = jwtDecode(token);
+    if (decoded.username) return navigate("/");
   }, [token, navigate]);
 }

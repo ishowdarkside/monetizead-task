@@ -3,7 +3,7 @@ import { useProductContext } from "../../../context/productContext";
 import styles from "./FilterPanel.module.scss";
 
 export default function FilterPanel(): JSX.Element {
-  const { search, setSearch, numResults, setNumResults, setFilter } =
+  const { search, setSearch, numResults, setNumResults, setFilter, setPage } =
     useProductContext();
 
   function handleFilterSubmit(e: FormEvent) {
@@ -15,7 +15,10 @@ export default function FilterPanel(): JSX.Element {
         type="text"
         placeholder="Search for products"
         value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => {
+          setPage(1);
+          setSearch(e.target.value);
+        }}
       />
       <div className={styles.selectWrapper}>
         <span>Filter by price</span>
