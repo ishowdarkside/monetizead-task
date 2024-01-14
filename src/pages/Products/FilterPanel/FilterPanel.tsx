@@ -3,7 +3,7 @@ import { useProductContext } from "../../../context/productContext";
 import styles from "./FilterPanel.module.scss";
 
 export default function FilterPanel(): JSX.Element {
-  const { search, setSearch, numResults, setNumResults, filter, setFilter } =
+  const { search, setSearch, numResults, setNumResults, setFilter } =
     useProductContext();
 
   function handleFilterSubmit(e: FormEvent) {
@@ -23,7 +23,6 @@ export default function FilterPanel(): JSX.Element {
           className={styles.select}
           onChange={(e) => setFilter(e.target.value)}
         >
-          <option value="none">None</option>
           <option value="low-high">Low-High</option>
           <option value="high-low">High-low</option>
         </select>
