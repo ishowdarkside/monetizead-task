@@ -1,3 +1,5 @@
+@import "../../../styles/mixins.scss";
+
 .pageBtn {
   border: none;
   outline: none;
@@ -9,10 +11,15 @@
 }
 
 .paginationWrapper {
-  display: flex;
-  gap: 0.3rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 6rem);
+  gap: 0.7rem;
   margin-top: 3rem;
+
+  @include responsive("mobile") {
+    grid-template-columns: repeat(auto-fit, 6.7rem);
+    justify-content: center;
+  }
 }
 
 .activebtn {
